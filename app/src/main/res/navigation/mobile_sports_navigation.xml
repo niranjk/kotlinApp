@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_sports_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.niranjankhatri.kotlinapp.sports.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home2" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.niranjankhatri.kotlinapp.sports.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.niranjankhatri.kotlinapp.sports.AccountFragment"
+        android:label="Account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/nav_mysports"
+        android:name="com.niranjankhatri.kotlinapp.sports.MySportsFragment"
+        android:label="My Sports"
+        tools:layout="@layout/fragment_my_sports" />
+    <fragment
+        android:id="@+id/nav_hockey"
+        android:name="com.niranjankhatri.kotlinapp.sports.HockeyFragment"
+        android:label="HockeyFragment" />
+    <fragment
+        android:id="@+id/nav_basketball"
+        android:name="com.niranjankhatri.kotlinapp.sports.BasketballFragment"
+        android:label="BasketballFragment" />
+    <fragment
+        android:id="@+id/nav_football"
+        android:name="com.niranjankhatri.kotlinapp.sports.FootballFragment"
+        android:label="FootballFragment" />
+
+
+</navigation>

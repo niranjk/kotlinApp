@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".postsapp.PostsApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.KotlinApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".postsapp.PostsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".di.koin.KoinActivity"
+            android:exported="true"/>
+        <activity
+            android:name=".di.hilt.HiltActivity"
+            android:exported="true" />
+        <activity
+            android:name=".di.dagger2.Dagger2Activity"
+            android:exported="true" />
+        <activity
+            android:name=".di.manual.ManualDIActivity"
+            android:exported="true" />
+        <activity
+            android:name=".dogapp.DogSettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".dogapp.DogActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".persistingdata.photo.PhotoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".persistingdata.copy.CopyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".persistingdata.datastore.DataStoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".persistingdata.sharedpreferences.SharedPrefActivity"
+            android:exported="false" />
+        <activity
+            android:name=".notes.NotesActivity"
+            android:exported="false"
+            android:label="@string/title_activity_notes" />
+        <activity
+            android:name=".newsapp.NewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".architecturecomponents.viewmodel.SplitActivity"
+            android:exported="false"
+            android:theme="@style/Theme.KotlinApp.NoActionBar" />
+        <activity
+            android:name=".testing.ui.Activity2"
+            android:exported="false"
+            android:label="@string/title_activity_2"
+            android:theme="@style/Theme.KotlinApp.NoActionBar" />
+        <activity
+            android:name=".testing.ui.Activity1"
+            android:exported="false"
+            android:label="@string/title_activity_1"
+            android:theme="@style/Theme.KotlinApp.NoActionBar" />
+        <activity
+            android:name=".testing.integration.robolectric.RobolectricActivity"
+            android:exported="false" />
+        <activity
+            android:name=".composeapp.ComposeMatrixActivity"
+            android:exported="false"
+            android:label="@string/title_activity_compose_matrix"
+            android:theme="@style/Theme.KotlinApp" />
+        <activity
+            android:name=".composetut.MyComposeActivity"
+            android:exported="false"
+            android:label="@string/title_activity_my_compose"
+            android:theme="@style/Theme.KotlinApp" />
+
+        <service
+            android:name=".water.WaterTrackingService"
+            android:enabled="false"
+            android:exported="true" />
+
+        <activity
+            android:name=".water.WaterActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".workmanager.PlayerRouteTrackingService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".workmanager.WorkManagerActivity"
+            android:exported="false" />
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/your_maps_api_key" />
+
+        <activity
+            android:name=".parking.ParkingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_parking" />
+        <activity
+            android:name=".maps.MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.KotlinApp.NoActionBar" /> <!-- Color -->
+        <activity
+            android:name=".color.ColorActivity"
+            android:exported="true" /> <!-- Lifecycle Demo -->
+        <activity
+            android:name=".lifecycledemo.LifecycleDemoActivity"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:exported="true" /> <!-- Save Restore -->
+        <activity
+            android:name=".saverestorestate.SaveRestoreActivity"
+            android:exported="true" />
+        <activity
+            android:name=".intent.explicit.StartIntentActivity"
+            android:exported="true" />
+        <activity android:name=".intent.explicit.WelcomeActivity" /> <!-- Rainbow Color Picker -->
+        <activity
+            android:name=".intent.retrieveresult.RetrieveResultStartActivity"
+            android:exported="true" />
+        <activity android:name=".intent.retrieveresult.RainbowColorPickerActivity" /> <!-- Launch mode -->
+        <activity
+            android:name=".intent.launchmode.LaunchModeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".intent.launchmode.ActivityA"
+            android:exported="true"
+            android:launchMode="standard" />
+        <activity
+            android:name=".intent.launchmode.ActivityB"
+            android:exported="true"
+            android:launchMode="standard" />
+        <activity
+            android:name=".intent.launchmode.ActivityC"
+            android:exported="true"
+            android:launchMode="standard" />
+        <activity
+            android:name=".intent.launchmode.ActivityOne"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".intent.launchmode.ActivityTwo"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".intent.launchmode.ActivityThree"
+            android:exported="true"
+            android:launchMode="singleTop" /> <!-- Login App -->
+        <activity
+            android:name=".login.singleTop.LoginSingleTopActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".login.standard.LoginStandardActivity"
+            android:exported="true" />
+        <activity
+            android:name=".login.standard.LoginWelcomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".login.register.LoginRegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".login.register.LoginRegisterWelcomeActivity"
+            android:exported="true" /> <!-- Fragment Demo -->
+        <activity
+            android:name=".fragments.fragmentlifecycledemo.DemoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragments.statically.StaticDemoActivity"
+            android:exported="true" /> <!-- Dualpane Demo -->
+        <activity
+            android:name=".fragments.dualpane.DualpaneDemoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".fragments.dualpane.DetailActivity"
+            android:exported="true" /> <!-- Dynamic -->
+        <activity
+            android:name=".fragments.dynamic.DynamicDemoActivity"
+            android:exported="true" /> <!-- Navigation Demo -->
+        <activity
+            android:name=".fragments.navgraph.NavigationDemoActivity"
+            android:exported="true" /> <!-- Quiz App -->
+        <activity
+            android:name=".quiz.QuizActivity"
+            android:exported="true" /> <!-- App Navigation -->
+        <activity
+            android:name=".appnavigation.navigationdrawer.AppNavigationActivity"
+            android:exported="true"
+            android:theme="@style/Theme.KotlinApp.NoActionBar" /> <!-- Bottom Navigation Bar -->
+        <activity
+            android:name=".appnavigation.bottomnavigation.BottomNavigationActivity"
+            android:exported="true" /> <!-- Tabbed Navigation -->
+        <activity
+            android:name=".appnavigation.tabbednavigation.TabbedNavigationActivity"
+            android:exported="true" /> <!-- Sports App -->
+        <activity
+            android:name=".sports.SportsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".catapi.CatApiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".recipe.RecipeActivity"
+            android:exported="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.niranjankhatri.kotlinapp.remote_media_provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

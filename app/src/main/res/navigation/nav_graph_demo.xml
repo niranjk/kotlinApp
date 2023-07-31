@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_demo"
+    app:startDestination="@id/navigationListFragment">
+
+    <fragment
+        android:id="@+id/navigationListFragment"
+        android:name="com.niranjankhatri.kotlinapp.fragments.navgraph.NavigationListFragment"
+        android:label="NavigationListFragment" >
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.niranjankhatri.kotlinapp.fragments.dualpane.DetailFragment"
+        android:label="DetailFragment" />
+</navigation>

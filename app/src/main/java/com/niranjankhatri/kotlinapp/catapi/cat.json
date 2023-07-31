@@ -1,0 +1,11 @@
+
+{
+  "cat": [
+    {
+      "name": "Bill", "email": "billy@cat.com"
+    },
+    {
+      "name": "Till", "email" : "till@cat.com"
+    }
+  ]
+}

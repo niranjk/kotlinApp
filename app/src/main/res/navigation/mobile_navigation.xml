@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.niranjankhatri.kotlinapp.appnavigation.navigationdrawer.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_contentFragment"
+            app:destination="@id/nav_content" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_content"
+        android:name="com.niranjankhatri.kotlinapp.appnavigation.navigationdrawer.ContentFragment"
+        android:label="fragment_content"
+        tools:layout="@layout/fragment_content" />
+    <fragment
+        android:id="@+id/nav_archive"
+        android:name="com.niranjankhatri.kotlinapp.appnavigation.navigationdrawer.ArchiveFragment"
+        android:label="ArchiveFragment" />
+    <fragment
+        android:id="@+id/nav_bin"
+        android:name="com.niranjankhatri.kotlinapp.appnavigation.navigationdrawer.BinFragment"
+        android:label="BinFragment" />
+    <fragment
+        android:id="@+id/nav_favorites"
+        android:name="com.niranjankhatri.kotlinapp.appnavigation.navigationdrawer.FavoritesFragment"
+        android:label="FavoritesFragment" />
+    <fragment
+        android:id="@+id/nav_recent"
+        android:name="com.niranjankhatri.kotlinapp.appnavigation.navigationdrawer.RecentFragment"
+        android:label="RecentFragment" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.niranjankhatri.kotlinapp.appnavigation.navigationdrawer.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>
