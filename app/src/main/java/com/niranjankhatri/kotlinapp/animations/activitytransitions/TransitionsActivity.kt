@@ -3,6 +3,7 @@ package com.niranjankhatri.kotlinapp.animations.activitytransitions
 import android.app.ActivityOptions
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.niranjankhatri.kotlinapp.databinding.ActivityTransitionsBinding
 
@@ -32,9 +33,12 @@ class TransitionsActivity : AppCompatActivity() {
                     putExtra("amount", amount)
                     putExtra("percent", percent)
                 }
+
+                val buttonPair: android.util.Pair<View, String> = android.util.Pair(binding.computeButton, "button")
+                val imagePair: android.util.Pair<View, String> = android.util.Pair(binding.image, "transition_name")
                 startActivity(
                     intent,
-                    ActivityOptions.makeSceneTransitionAnimation(this@TransitionsActivity).toBundle()
+                    ActivityOptions.makeSceneTransitionAnimation(this@TransitionsActivity,imagePair).toBundle()
                 )
             }
         }
