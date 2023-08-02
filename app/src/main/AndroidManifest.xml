@@ -8,7 +8,9 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
 
     <application
         android:name=".postsapp.PostsApplication"
@@ -21,16 +23,23 @@
         android:theme="@style/Theme.KotlinApp"
         tools:targetApi="31">
         <activity
-            android:name=".postsapp.PostsActivity"
+            android:name=".animations.activitytransitions.OutputActivity"
+            android:exported="false" />
+        <activity
+            android:name=".animations.activitytransitions.TransitionsActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
+            android:name=".postsapp.PostsActivity"
+            android:exported="true"></activity>
+        <activity
             android:name=".di.koin.KoinActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".di.hilt.HiltActivity"
             android:exported="true" />
@@ -45,7 +54,7 @@
             android:exported="false" />
         <activity
             android:name=".dogapp.DogActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".persistingdata.photo.PhotoActivity"
             android:exported="false" />

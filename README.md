@@ -469,6 +469,13 @@ Steps:
 10. Create a Hilt module that will be responsible for defining the dependencies required for the activity.
 
 
+# Activity Transitions - built in support by Android 
+
+1. Explode : this moves views in or out from the center
+2. Fade: This view slowly appears or disappears
+3. Slide : moves view in or out from the edges. 
+
+
 
 
 

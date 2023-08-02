@@ -235,4 +235,9 @@
     <string name="video">Video</string>
     <string name="choose_the_number_of_urls_you_want_to_display">Choose the number of URLs you want to display:</string>
     <string name="randomize">Randomize</string>
+    <string name="amount">Amount</string>
+    <string name="tip_percent">Tip Percent</string>
+    <string name="compute">Compute</string>
+
+    <string name="tip">Tip: %s</string>
 </resources>
