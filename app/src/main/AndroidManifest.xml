@@ -25,11 +25,6 @@
         <activity
             android:name=".animations.coordinatorlayout.CoordinatorActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".animations.motionlayout.MotionOutputActivity"
@@ -37,6 +32,10 @@
         <activity
             android:name=".animations.motionlayout.MotionActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".animations.activitytransitions.OutputActivity"
